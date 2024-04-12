@@ -34,7 +34,8 @@ func echo(w http.ResponseWriter, r *http.Request) {
 	io.WriteString(w, string(body))
 }
 
-// main method, which starts the webserver and attaches the routes
+// Main method, which starts the webserver and attaches the routes.
+// Moreover, it handles graceful shutdowns.
 func main() {
 
 	// Parse command-line flags
